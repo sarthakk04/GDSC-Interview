@@ -1,42 +1,267 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #212529;
+}
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 120px;
+}
+.nav {
+  color: white;
+}
+
+.nav ul {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: larger;
+}
+
+.nav li {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(0, 255, 94), rgb(21, 0, 255)),
+    linear-gradient(to right, rgb(225, 255, 0), rgb(246, 0, 0));
+  background-size: 100% 0px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  cursor: pointer;
+}
+
+li:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust this for your specific layout */
+  font-size: 4rem; /* Adjust the font size */
+  font-weight: bold; /* Make the font bold */
+}
+
+/* Team Section Styling */
+.team-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: red;
+}
+
+.team-card-col {
+  margin-bottom: 20px; /* Spacing between cards */
+}
+
+.team-card {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Card color scheme inspired by Google */
+.team-card .card-title {
+  color: #4285f4; /* Blue for titles */
+}
+
+.team-card .card-subtitle {
+  color: #db4437; /* Red for subtitles */
+}
+
+.team-card .card-text {
+  color: #0f9d58; /* Green for text */
+}
+
+/* Responsive layout for small devices */
+@media (max-width: 768px) {
+  .team-card {
+    margin-bottom: 20px;
+  }
+
+  .team-heading {
+    font-size: 2rem;
+  }
+}
+
+/* FAQ Section Styling */
+.faq-section {
+  padding: 50px 0;
+  background-color: #212529;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.faq-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #4285f4; /* Google blue for heading */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.accordion-header {
+  font-weight: bold;
+  background-color: #f4f4f4;
+  color: #4285f4; /* Google blue for question headings */
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Light background for answers */
+  color: #0f9d58; /* Google green for answers */
+}
+
+/* Responsive layout for small devices */
+@media (max-width: 768px) {
+  .team-heading,
+  .faq-heading {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .accordion-header {
+    font-size: 1.2rem;
+  }
+
+  .accordion-body {
+    font-size: 0.9rem;
+  }
+}
+/* "Join Us" Button Styling */
+.join-us-button-container {
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+}
+
+.join-us-button {
+  background-color: white;
+  color: #4285f4; /* Google blue text */
+  border: 2px solid #4285f4; /* Google blue border */
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.join-us-button:hover {
+  background-color: #4285f4; /* Blue background on hover */
+  color: white; /* White text on hover */
+  transform: scale(1.05); /* Slight scaling animation on hover */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f4f4f4; /* Light background for the footer */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #4285f4; /* Google blue for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #db4437; /* Change to Google red on hover */
+}
+
+.footer-logo img {
+  width: 150px; /* Adjust logo size */
+  object-fit: contain;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: 10px;
+  }
+
+  .footer-logo img {
+    margin-top: 10px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Domains Section */
+.domains-section {
+  padding: 50px 0;
+}
+
+.domain-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+  color: white;
+  min-height: 300px;
+}
+
+.domain-text {
+  text-align: left;
+  padding: 20px;
+}
+
+.domain-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.domain-text p {
+  font-size: 1.2rem;
+}
+
+.domain-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .domain-row {
+    flex-direction: column;
+    text-align: center;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .domain-text {
+    text-align: center;
+  }
 }
